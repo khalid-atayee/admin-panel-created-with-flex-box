@@ -1,0 +1,121 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    font-family: 'Happy monkey',cursive;
+    display: flex;
+    padding: 1.5em;
+    justify-content: space-between;
+    background-color: #2F3E46;
+    align-items: center;
+    color: white;
+    
+}
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    padding-left: 2em;
+}
+header ul li i{
+    font-size: 1.5rem;
+}
+
+.profile{
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+.main-content{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+aside{
+    background-color: #354F52;
+    height: 83vh;
+    flex-basis: 17%;
+    
+}
+.main-content ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+.company-name{
+    font-family: 'Happy monkey', sans-serif;
+    color: rgba(255, 255, 255);
+    opacity: .9;
+    border-bottom: 1px solid #2F3E46;
+    padding: 1em 0;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+
+}
+
+.menu{
+    margin: 1em;
+    width: 100%;
+    padding-left:2em;
+}
+.menu li i {
+    margin-right: 1em;
+    color: white;
+   
+}
+.main-content ul li{
+    width: 100%;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: .7em;
+    font-size: 1.1rem;
+
+   
+    
+
+}
+.main-content ul li a{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+
+    
+
+
+}
+
+
+main{
+    background-color: #CAD2C5;
+    flex-basis: 83%;
+    /* gap: 30px; */
+    
+    
+}
+.wrapper-container{
+    display: flex;
+}
+.content{
+    background-color: white;
+    width: 100%;
+    margin: 1em;
+    padding: 1.5em;
+    box-shadow: 5px,5px,5px,black;
+    box-shadow:  0px 0px 5px 0px #b6bdb2;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer{
+    border: 1px solid darkblue;
+}
