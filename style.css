@@ -11,6 +11,7 @@ header{
     background-color: #2F3E46;
     align-items: center;
     color: white;
+    position: relative;
     
 }
 header ul{
@@ -29,6 +30,19 @@ header ul li i{
 .profile{
     width: 50px;
     border-radius: 50%;
+    cursor: pointer;
+}
+#burgar{
+    display: none;
+    padding-right: 1em;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#burgar i{
+    padding-left: 1em;
+}
+.nav{
+    left:0%
 }
 
 
@@ -41,9 +55,14 @@ header ul li i{
 aside{
     background-color: #354F52;
     height: 83vh;
-    flex-basis: 17%;
+    flex: 1 0 2;
+    transition: all 100ms;
     
 }
+aside ul{
+    width: 250px;
+}
+/*  */
 .main-content ul{
     display: flex;
     flex-direction: column;
@@ -54,8 +73,8 @@ aside{
 }
 .company-name{
     font-family: 'Happy monkey', sans-serif;
-    color: rgba(255, 255, 255);
-    opacity: .9;
+    color: rgba(255,255,255,0.7);
+  
     border-bottom: 1px solid #2F3E46;
     padding: 1em 0;
     font-size: 1.2rem;
@@ -67,41 +86,59 @@ aside{
 .menu{
     margin: 1em;
     width: 100%;
-    padding-left:2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.spanActive{
+   
+    position: absolute;
+    right:-6%;
+    top: 7%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #CAD2C5;
+    border-width: 5px 20px 20px 5px;
+
+    transform: rotate(-43deg);
 }
 .menu li i {
     margin-right: 1em;
     color: white;
+    align-items: center;
+    
    
 }
+.menu li a{
+    font-size: 1.2rem;
+}
 .main-content ul li{
-    width: 100%;
+    width:100%;
     text-align: justify;
     text-justify: inter-word;
-    padding: .7em;
+    padding: .7em 0;  
     font-size: 1.1rem;
-
-   
-    
+    /* padding-left:2em; */
+    /* overflow: hidden;
+    z-index: 1; */
 
 }
 .main-content ul li a{
     color: white;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-
-    
-
-
+    margin-left: 1em;
+ 
 }
 
 
 main{
     background-color: #CAD2C5;
-    flex-basis: 83%;
-    /* gap: 30px; */
-    
-    
+    flex:2; 
 }
 .wrapper-container{
     display: flex;
@@ -109,13 +146,102 @@ main{
 .content{
     background-color: white;
     width: 100%;
-    margin: 1em;
+    margin: 1.2em;
     padding: 1.5em;
     box-shadow: 5px,5px,5px,black;
     box-shadow:  0px 0px 5px 0px #b6bdb2;
     font-family: 'Roboto', sans-serif;
+    /* z-index: 1; */
+}
+#dots{
+    display: none;
+}
+
+#search_input{
+    width: 100%;
+    padding: .5em 2em;
+    border: #2F3E46;
+    outline: none;
+}
+.search_list{
+   display: flex;
+   width: 300px;
+   flex: 2 1 1;
+}
+.showInput{
+    display: none;
+}
+
+
+.active{
+    width: fit-content;
+    background-color: red;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 20vh;
+    background-color: #e3ebde;
+    position: absolute;
+    /* top: 0%; */
+    right: 0%;
+    padding: 1em;
+}
+.btn{
+    padding: .7em 1.5em;
+    margin: .3em;
+}
+.toggle-container{
+    display: none;
 }
 
 footer{
     border: 1px solid darkblue;
+}
+
+
+@media (max-width:768px){
+    .aside{
+        position:fixed;
+        bottom: 0%;
+        right:100%;
+        transition: all 100ms;
+    }
+    header ul{
+        display: none;
+        transition: all 250ms;
+    }
+   
+    .header-icons {
+        position: fixed;
+        top: 12%;
+        padding: .5em;
+        left: 0;
+        right: 0;
+        background-color: #e3ebde;
+        color:#2F3E46;
+        width: 100%;        
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+    }
+    header ul li{
+        margin-right: 2em;
+    
+    }
+    #burgar{
+        display:inline-block;
+    }
+    .btn-container{
+        top: 23%;
+        /* left: 40%; */
+        width: 50%;
+    }
+    /* #dots{
+        display: ;
+    } */
 }
