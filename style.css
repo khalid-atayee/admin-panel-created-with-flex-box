@@ -6,9 +6,9 @@
 header{
     font-family: 'Happy monkey',cursive;
     display: flex;
-    padding: 1.5em;
+    padding: .7em;
     justify-content: space-between;
-    background-color: #2F3E46;
+    background-color: #6c757d;
     align-items: center;
     color: white;
     position: relative;
@@ -53,8 +53,8 @@ header ul li i{
 }
 
 aside{
-    background-color: #354F52;
-    height: 83vh;
+    background-color: #495057;
+    min-height: 83vh;
     flex: 1 0 2;
     transition: all 100ms;
     
@@ -74,7 +74,6 @@ aside ul{
 .company-name{
     font-family: 'Happy monkey', sans-serif;
     color: rgba(255,255,255,0.7);
-  
     border-bottom: 1px solid #2F3E46;
     padding: 1em 0;
     font-size: 1.2rem;
@@ -200,7 +199,21 @@ main{
 }
 
 footer{
-    border: 1px solid darkblue;
+    display: flex;
+    padding: 2em;
+    background-color: #6c757d;
+    color: rgba(255, 255, 255,.8);
+    justify-content: space-between;
+
+}
+footer ul{
+    display: flex;
+    
+}
+footer ul li{
+    text-decoration: none;
+    list-style: none;
+    padding-right: 1em;
 }
 
 
@@ -217,8 +230,8 @@ footer{
     }
    
     .header-icons {
-        position: fixed;
-        top: 12%;
+        position: absolute;
+        top: 100%;
         padding: .5em;
         left: 0;
         right: 0;
@@ -240,6 +253,14 @@ footer{
         top: 23%;
         /* left: 40%; */
         width: 50%;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+    }
+    footer ul{
+       line-height: 20px; 
     }
     /* #dots{
         display: ;
